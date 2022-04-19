@@ -18,7 +18,13 @@
 
 </div>
 
-<script src="index.js"></script>
+<script>
+    function send() {
+        const ref = document.getElementById('ref').value;
+        window.location = `https://pstk-shop.paystackintegrations.com/finalize?shop=nifty-gifts-za.myshopify.com&reference=${ref}`
+        console.log('sending', ref)
+    }
+</script>
 </body>
 
 </html>
