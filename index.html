@@ -14,14 +14,18 @@
     </div>
 
 
-    <button class="p-2 border-2 rounded" onclick="send()">Send To Shopify<button>
+    <button id="btn" class="p-2 border-2 rounded" onclick="send()">Send To Shopify<button>
 
 </div>
 
 <script>
     function send() {
         const ref = document.getElementById('ref').value;
+        const btn = document.getElementById('btn');
+        btn.style.visibility = 'none'
         window.location = `https://pstk-shop.paystackintegrations.com/finalize?shop=nifty-gifts-za.myshopify.com&reference=${ref}`
+
+
         console.log('sending', ref)
     }
 </script>
